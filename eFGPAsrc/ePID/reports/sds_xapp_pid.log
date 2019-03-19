@@ -1,0 +1,165 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sun Feb 10 19:40:51 -0600 2019
+# Command line  : sds++ -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/xapp_pid.o -MMD -MP -MFsrc/xapp_pid.d -MTsrc/xapp_pid.o -o src/xapp_pid.o ../src/xapp_pid.cpp -sds-hw PID_Controller xapp_pid.cpp -clkid 2 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs PID_Controller -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds_xapp_pid.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds_xapp_pid.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds_xapp_pid.rpt
+#-----------------------------------------------------------
+
+C:/Xilinx/SDx/2018.3/bin/perf_instrumenter  -r main  -funclist PID_Controller  -tempfunclist PID_Controller  -w C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est  -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/xapp_pid.cpp  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/unix_xapp_pid.cpp  --  -c  -I C:/Users/DustinZhou/Documents/Xilinx/ePID/src  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Analyzing source for RTL template usage
+C:/Xilinx/SDx/2018.3/bin/rtl_template_extract  C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp  -save-query C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/src/xapp_pid.rtlx  --  -c  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+C:/Xilinx/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11  -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/src/xapp_pid.s
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/src/xapp_pid.s 
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>exit /b 0 
+Compiling C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp
+arm-linux-gnueabihf-g++ -c -I../src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/src/xapp_pid.o -MFC:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/src/xapp_pid.d -MTC:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/src/xapp_pid.o -I C:/Users/DustinZhou/Documents/Xilinx/ePID/src -I C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/xapp_pid.cpp -o src/xapp_pid.o
+Analyzing source for RTL template usage
+C:/Xilinx/SDx/2018.3/bin/rtl_template_extract  C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp  -save-query C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/src/xapp_pid.rtlx  --  -c  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+C:/Xilinx/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11  -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/src/xapp_pid.s
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/src/xapp_pid.s 
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>exit /b 0 
+Performing accelerator source linting for PID_Controller
+C:/Xilinx/SDx/2018.3/bin/sdslint -target cortex-a9 -func "PID_Controller" C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -- -c -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+arm-linux-gnueabihf-g++ -c C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+arm-linux-gnueabihf-objcopy --add-section .xdinfo=C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o.xml C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+Performing pragma generation
+C:/Xilinx/SDx/2018.3/bin/clang_wrapper -E -IC:/Users/DustinZhou/Documents/Xilinx/ePID/src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -IC:/Users/DustinZhou/Documents/Xilinx/ePID/src -D __SDSVHLS__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/xapp_pid_pp.cpp
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -E -IC:/Users/DustinZhou/Documents/Xilinx/ePID/src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32 -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -IC:/Users/DustinZhou/Documents/Xilinx/ePID/src -D __SDSVHLS__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include -std=c++11 C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/xapp_pid_pp.cpp 
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>exit /b 0 
+C:/Xilinx/SDx/2018.3/bin/pragma_gen  -func "PID_Controller"   -tcl C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller.tcl   C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/xapp_pid_pp.cpp -multi_aximm   --  -c  -D __SDSVHLS__ -IC:/Users/DustinZhou/Documents/Xilinx/ePID/src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -m32      -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -IC:/Users/DustinZhou/Documents/Xilinx/ePID/src  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+INFO: [PragmaGen 83-3231] Successfully generated tcl script: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller.tcl
+Moving function PID_Controller to Programmable Logic
+C:/Xilinx/Vivado/2018.3/bin/vivado_hls C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller_run.tcl -l PID_Controller_vivado_hls.log
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'DustinZhou' on host 'desktop-2ck74up' (Windows NT_amd64 version 6.2) on Sun Feb 10 19:41:13 -0600 2019
+INFO: [HLS 200-10] In directory 'C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller'.
+INFO: [HLS 200-10] Adding design file 'C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to ' xc7z020clg484-1 '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=0
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 103.160 ; gain = 17.980
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 103.160 ; gain = 17.980
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 104.277 ; gain = 19.098
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 104.535 ; gain = 19.355
+WARNING: [XFORM 203-105] Ignore complete array partition directive on 'coeff' (C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp:40) in dimension 1: conflict with memory core assignment directive.
+.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 125.691 ; gain = 40.512
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 125.691 ; gain = 40.512
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'PID_Controller' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PID_Controller' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.272 seconds; current allocated memory: 77.093 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.382 seconds; current allocated memory: 77.593 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PID_Controller' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'PID_Controller/InitN' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'PID_Controller/coeff' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'PID_Controller/din' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'PID_Controller/dout' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'PID_Controller' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'prev_yi' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prev_x2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prev_x1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'prev_yd' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'PID_Controller_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'PID_Controller_fabkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'PID_Controller_fmul_32ns_32ns_32_4_max_dsp_1' to 'PID_Controller_fmcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'PID_Controller_fcmp_32ns_32ns_1_1_1' to 'PID_Controller_fcdEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'PID_Controller/coeff_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PID_Controller/coeff_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PID_Controller/din_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'PID_Controller/din_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'PID_Controller_fabkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'PID_Controller_fcdEe': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'PID_Controller_fmcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PID_Controller'.
+INFO: [HLS 200-111]  Elapsed time: 0.656 seconds; current allocated memory: 78.551 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 128.691 ; gain = 43.512
+INFO: [SYSC 207-301] Generating SystemC RTL for PID_Controller with prefix a0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for PID_Controller with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for PID_Controller with prefix a0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller/solution/impl/ip'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'a0_PID_Controller_ap_faddfsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 297.762 ; gain = 43.613
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_PID_Controller_ap_faddfsub_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_PID_Controller_ap_faddfsub_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a0_PID_Controller_ap_fcmp_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_PID_Controller_ap_fcmp_0_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_PID_Controller_ap_fcmp_0_no_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'a0_PID_Controller_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'a0_PID_Controller_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'a0_PID_Controller_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 10 19:42:13 2019...
+INFO: [HLS 200-112] Total elapsed time: 60.335 seconds; peak allocated memory: 78.551 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Feb 10 19:42:13 2019...
+C:/Xilinx/SDK/2018.3/gnuwin/bin/sed.exe -i -e {s/xilinx\.com\/xidane/xilinx\.com\/xd/g} C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller/solution/impl/ip/auxiliary.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller.hlsmap1.xml  --stringparam P_CLKID 2  --stringparam P_HLS_TYPE hls   C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapRenameAttr.xsl  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller_auxiliary.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller.hlsmap.xml  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapAdapter.xsl  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller.hlsmap1.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc    --output C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller.fcnmap.xml  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsmapAxi4.xsl  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller.hlsmap.xml
+C:/Xilinx/SDx/2018.3/bin/xsltproc  --output C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller_if.xml  --stringparam P_ADAPTER_COMPREF adapter_v3_0  C:/Xilinx/SDx/2018.3/scripts/xsd/xdHlsAdapterComp.xsl  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller.fcnmap.xml
+arm-linux-gnueabihf-objcopy --add-section .xddata=C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/PID_Controller.xml C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+arm-linux-gnueabihf-objcopy --add-section .xdasm=C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/src/xapp_pid.s C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+arm-linux-gnueabihf-g++ -E -I../src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/src/xapp_pid.o -MFC:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/src/xapp_pid.d -MTC:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/src/xapp_pid.o       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include C:/Users/DustinZhou/Documents/Xilinx/ePID/src/xapp_pid.cpp -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.pp/xapp_pid.iix
+arm-linux-gnueabihf-objcopy --add-section .xdpp=C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.pp/xapp_pid.ii C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+arm-linux-gnueabihf-objcopy --add-section .xdfcnmap=C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller.fcnmap.xml C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+arm-linux-gnueabihf-objcopy --add-section .xdhlscore=C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller/solution/impl/ip/xilinx_com_hls_PID_Controller_1_0.zip C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+arm-linux-gnueabihf-objcopy --add-section .xdif=C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/PID_Controller_if.xml C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/xapp_pid.o
+sds++ log file saved as C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds_xapp_pid.log
+sds++ completed at Sun Feb 10 19:42:14 -0600 2019

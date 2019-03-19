@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="eMmult" location="C:/Users/DustinZhou/Documents/Xilinx/eMmult" platform="C:/Xilinx/SDx/2018.3/platforms/zed/zed.xpfm" platformUID="xilinx.com:zed:zed:1.0" systemProject="eMmult_system" sysConfig="linux" runtime="C/C++" cpu="linux" cpuInstance="" os="linux" ConfigType="Debug">
+  <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.290092318">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" estimateSpeedup="true" md5SumElf="c97bcf6eaa63662f13be9bcd07f63ad3" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="matrixmul" filepath="src/matrixmultiplication.cpp" clkid="2" location="C:/Users/DustinZhou/Documents/Xilinx/eMmult/src/matrixmultiplication.cpp">
+        <args name="A"/>
+        <args name="B"/>
+        <args name="AB"/>
+      </accelerator>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" estimateSpeedup="true" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="matrixmul" filepath="src/matrixmultiplication.cpp" clkid="2" location="C:/Users/DustinZhou/Documents/Xilinx/eMmult/src/matrixmultiplication.cpp">
+        <args name="A"/>
+        <args name="B"/>
+        <args name="AB"/>
+      </accelerator>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.726072671" dirty="true">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false"/>
+  </configuration>
+</sdsproject:SDSProject>

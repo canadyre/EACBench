@@ -1,0 +1,115 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sun Feb 10 19:42:16 -0600 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/DustinZhou/Documents/Xilinx/ip_cache -o ePID.elf ./src/test_xapp_pid.o ./src/xapp_pid.o -dmclkid 2 -perf-root main -perf-est swdata.xml -perf-funcs PID_Controller -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+Libraries: 
+Library Paths {}
+Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/test_xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/test_xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/test_xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/test_xapp_pid.o.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xapp_pid.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/.Xil/zed.hpfm    -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
+Using prebuilt hardware
+Skipping block diagram (BD), address map, port information and device registration for partition 0
+Prepare hardware access API functions
+Create accelerator stub functions
+Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.c
+C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
+C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
+   apf_perf_estimation_exit();
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/cf_stub.o
+Compile accelerator stub functions
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/libePID.a C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/cf_stub.o 
+Enable generation of boot files
+Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.c
+C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
+C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
+   apf_perf_estimation_exit();
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/cf_stub.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/libePID.a C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/cf_stub.o 
+Link application ELF file
+arm-linux-gnueabihf-g++   C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/sw_perf_est.o  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/test_xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/portinfo.o     -LC:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -LC:/Xilinx/SDx/2018.3/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/ePID.elf 
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/swstubs/ePID.elf
+Libraries: 
+Library Paths {} {}
+Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/test_xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/test_xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/test_xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/test_xapp_pid.o.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/.accdata/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/.accdata/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.rtlx/xapp_pid.rtlx
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/.accdata/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.data/PID_Controller.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/.accdata/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.pp/xapp_pid.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/.accdata/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.cdb/PID_Controller.PID_Controller.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/.accdata/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/xilinx_com_hls_PID_Controller_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/xilinx_com_hls_PID_Controller_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/xilinx_com_hls_PID_Controller_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/ip/a0_PID_Controller_ap_faddfsub_3_full_dsp_32.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/ip/a0_PID_Controller_ap_fcmp_0_no_dsp_32.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/ip/a0_PID_Controller_ap_fmul_2_max_dsp_32.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/constraints/a0_PID_Controller_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/verilog/a0_PID_Controller_fabkb.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/verilog/a0_PID_Controller_fcdEe.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/verilog/a0_PID_Controller_fmcud.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/verilog/a0_PID_Controller.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/vhdl/a0_PID_Controller_fabkb.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/vhdl/a0_PID_Controller_fcdEe.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/vhdl/a0_PID_Controller_fmcud.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/hdl/vhdl/a0_PID_Controller.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/xgui/PID_Controller_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est/.accdata/xapp_pid.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.cdb/PID_Controller_if.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/.Xil/zed.hpfm  -ip C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0  -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/iprepo/repo/xilinx_com_hls_PID_Controller_1_0/component.xml
+ip_name: PID_Controller
+Generating data motion network
+C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/./src/test_xapp_pid.s C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/./src/xapp_pid.s
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/./src/test_xapp_pid.s C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/./src/xapp_pid.s 
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug>exit /b 0 
+C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os linux -processor cortex-a9 -partition 0   -perfest
+
+C:\Users\DustinZhou\Documents\Xilinx\ePID\Debug\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --dmclkid 2 --repo C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.3/data/DM.db -os linux -processor cortex-a9 -partition 0 -perfest  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
+INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
+INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
+INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
+INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
+INFO: [DMAnalysis 83-4452] Generating performance estimation for partition 0
+INFO: [DMAnalysis 83-4454] Rewriting caller code
+C:/Xilinx/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/hw_perf_est.xml  -r C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.cdb/xd_ip_db.xml  -est_ws C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/est  -apsys C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/.llvm/apsys_0.xml
+INFO: [PerfEst 83-3803] Software run information file swdata.xml not found. Continuing without comparison to software run data
+  For graph with functions: PID_Controller:test_xapp_pid.cpp:213
+    Estimated hardware latency = 5572
+  Estimated resource usage:
+    dsps used = 5/220
+    bram used = 0/140
+    luts used = 2102/53200
+    FFs used = 1168/106400
+sds++ log file saved as C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds.log
+sds++ completed at Sun Feb 10 19:43:11 -0600 2019

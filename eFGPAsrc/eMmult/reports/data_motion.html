@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td
+    {
+      border-collapse:collapse;
+      border:1px solid black;
+    }
+    th, td
+    {
+      padding:5px;
+    }
+    p
+    {
+      font-size:200%
+    }
+  </style>
+  <title> Data Motion Network Report </title>
+</head>
+<body>
+<p>Partition 0</p>
+<sup><strong>Note:</strong> "(size)" may show up in the Declared/Transfer Size of an argument if the actual array size was not present in the C/C++ source code, most likely the argument is a pointer.<br>
+     * - Line number under Callsite with an asterisk * is based on the generated source file located at .../_sds/.llvm.  It is not based on the original source file.</sup><table>
+<caption><b><font size="5">Data Motion Network</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Argument</th>
+<th>IP Port</th>
+<th>Direction</th>
+<th>Declared Size(bytes)</th>
+<th>Pragmas</th>
+<th>Connection</th>
+</tr>
+<tr>
+<td>matrixmul_1</td>
+<td>A0</td>
+<td>A0</td>
+<td>IN</td>
+<td>1024*4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+<td></td>
+<td>B0</td>
+<td>B0</td>
+<td>IN</td>
+<td>1024*4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+<td></td>
+<td>AB</td>
+<td>AB</td>
+<td>OUT</td>
+<td>1024*4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SIMPLE</td>
+</tr>
+</table>
+
+<table>
+<caption><b><font size="5">Accelerator Callsites</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Callsite</th>
+<th>IP Port</th>
+<th>Transfer Size(bytes)</th>
+<th>Paged or Contiguous</th>
+<th>Datamover Setup Time(CPU cycles)</th>
+<th>Transfer Time(CPU cycles)</th>
+</tr>
+<tr>
+<td>matrixmul_1</td>
+<td>matrixmultiplication-top.cpp:43:2</td>
+<td>A0</td>
+<td>4096</td>
+<td>contiguous</td>
+<td>1112</td>
+<td>7976</td>
+</tr>
+<td></td>
+<td></td>
+<td>B0</td>
+<td>4096</td>
+<td>contiguous</td>
+<td>1112</td>
+<td>7976</td>
+</tr>
+<td></td>
+<td></td>
+<td>AB</td>
+<td>4096</td>
+<td>contiguous</td>
+<td>1112</td>
+<td>7976</td>
+</tr>
+</table>
+</body>
+<dmn>
+	<accel name="matrixmul_1">
+		<arg name="A0" ipPort="A0" direction="IN" size="1024*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIDMA_SIMPLE"\>
+		<arg name="B0" ipPort="B0" direction="IN" size="1024*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIDMA_SIMPLE"\>
+		<arg name="AB" ipPort="AB" direction="OUT" size="1024*4" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIDMA_SIMPLE"\>
+	</accel>
+	<call accel="matrixmul_1" site="matrixmultiplication-top.cpp:43:2">
+		<arg ipPort="A0" size="4096" memType="contiguous" setup="1112" transfer="7976"/>
+		<arg ipPort="B0" size="4096" memType="contiguous" setup="1112" transfer="7976"/>
+		<arg ipPort="AB" size="4096" memType="contiguous" setup="1112" transfer="7976"/>
+	</call>
+</dmn>
+</html>

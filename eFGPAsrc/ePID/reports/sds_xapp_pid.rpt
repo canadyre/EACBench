@@ -1,0 +1,234 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sun Feb 10 19:40:51 -0600 2019
+# Command line  : sds++ -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/xapp_pid.o -MMD -MP -MFsrc/xapp_pid.d -MTsrc/xapp_pid.o -o src/xapp_pid.o ../src/xapp_pid.cpp -sds-hw PID_Controller xapp_pid.cpp -clkid 2 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs PID_Controller -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds_xapp_pid.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds_xapp_pid.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/reports/sds_xapp_pid.rpt
+#-----------------------------------------------------------
+
+High-Level Synthesis
+--------------------
+
+  Vivado HLS Report : C:/Users/DustinZhou/Documents/Xilinx/ePID/Debug/_sds/vhls/PID_Controller/solution/syn/report/PID_Controller_csynth.rpt
+
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.442|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   37|   37|   37|   37|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    499|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      5|     480|   1189|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    414|
+|Register         |        -|      -|     688|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      5|    1168|   2102|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      2|       1|      3|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |PID_Controller_fabkb_U1  |PID_Controller_fabkb  |        0|      2|  205|  390|
+    |PID_Controller_fcdEe_U3  |PID_Controller_fcdEe  |        0|      0|   66|  239|
+    |PID_Controller_fcdEe_U4  |PID_Controller_fcdEe  |        0|      0|   66|  239|
+    |PID_Controller_fmcud_U2  |PID_Controller_fmcud  |        0|      3|  143|  321|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |Total                    |                      |        0|      5|  480| 1189|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |tmp_13_fu_333_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_15_fu_337_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_19_fu_443_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_21_fu_448_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_22_fu_460_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_24_fu_465_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_28_fu_525_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_30_fu_529_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_31_fu_541_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_33_fu_545_p2          |    and   |      0|  0|   2|           1|           1|
+    |tmp_8_fu_280_p2           |    and   |      0|  0|   2|           1|           1|
+    |tmp_s_fu_286_p2           |    and   |      0|  0|   2|           1|           1|
+    |notlhs2_fu_315_p2         |   icmp   |      0|  0|  11|           8|           2|
+    |notlhs3_fu_425_p2         |   icmp   |      0|  0|  11|           8|           2|
+    |notlhs7_fu_507_p2         |   icmp   |      0|  0|  11|           8|           2|
+    |notlhs8_fu_262_p2         |   icmp   |      0|  0|  11|           8|           2|
+    |notlhs_fu_244_p2          |   icmp   |      0|  0|  11|           8|           2|
+    |notrhs2_fu_321_p2         |   icmp   |      0|  0|  18|          23|           1|
+    |notrhs3_fu_431_p2         |   icmp   |      0|  0|  18|          23|           1|
+    |notrhs7_fu_513_p2         |   icmp   |      0|  0|  18|          23|           1|
+    |notrhs9_fu_268_p2         |   icmp   |      0|  0|  18|          23|           1|
+    |notrhs_fu_250_p2          |   icmp   |      0|  0|  18|          23|           1|
+    |tmp_12_fu_327_p2          |    or    |      0|  0|   2|           1|           1|
+    |tmp_18_fu_437_p2          |    or    |      0|  0|   2|           1|           1|
+    |tmp_27_fu_519_p2          |    or    |      0|  0|   2|           1|           1|
+    |tmp_4_fu_256_p2           |    or    |      0|  0|   2|           1|           1|
+    |tmp_6_fu_274_p2           |    or    |      0|  0|   2|           1|           1|
+    |e_1_fu_342_p3             |  select  |      0|  0|  32|           1|          32|
+    |e_fu_291_p3               |  select  |      0|  0|  32|           1|          32|
+    |prev_x1_load_s_fu_371_p3  |  select  |      0|  0|  32|           1|          32|
+    |prev_x2_load_s_fu_353_p3  |  select  |      0|  0|  32|           1|          32|
+    |prev_yd_load_s_fu_388_p3  |  select  |      0|  0|  32|           1|          32|
+    |prev_yi_load_s_fu_400_p3  |  select  |      0|  0|  32|           1|          32|
+    |tmp_5_fu_534_p3           |  select  |      0|  0|  32|           1|          32|
+    |tmp_7_fu_550_p3           |  select  |      0|  0|  32|           1|          32|
+    |yi_1_fu_470_p3            |  select  |      0|  0|  32|           1|          32|
+    |yi_fu_453_p3              |  select  |      0|  0|  32|           1|          32|
+    +--------------------------+----------+-------+---+----+------------+------------+
+    |Total                     |          |      0|  0| 499|         182|         352|
+    +--------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+-----+-----------+-----+-----------+
+    |        Name       | LUT | Input Size| Bits| Total Bits|
+    +-------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm          |  173|         39|    1|         39|
+    |coeff_Addr_A_orig  |   38|          7|   32|        224|
+    |din_Addr_A_orig    |   15|          3|   32|         96|
+    |dout_Addr_A_orig   |   15|          3|   32|         96|
+    |dout_Din_A         |   15|          3|   32|         96|
+    |dout_WEN_A         |    9|          2|    4|          8|
+    |grp_fu_175_opcode  |   15|          3|    2|          6|
+    |grp_fu_175_p0      |   41|          8|   32|        256|
+    |grp_fu_175_p1      |   27|          5|   32|        160|
+    |grp_fu_179_p0      |   15|          3|   32|         96|
+    |grp_fu_179_p1      |   21|          4|   32|        128|
+    |grp_fu_183_opcode  |   15|          3|    5|         15|
+    |grp_fu_183_p1      |   15|          3|   32|         96|
+    +-------------------+-----+-----------+-----+-----------+
+    |Total              |  414|         86|  300|       1316|
+    +-------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+----+----+-----+-----------+
+    |          Name          | FF | LUT| Bits| Const Bits|
+    +------------------------+----+----+-----+-----------+
+    |Gd_reg_588              |  32|   0|   32|          0|
+    |ap_CS_fsm               |  38|   0|   38|          0|
+    |e_1_reg_655             |  32|   0|   32|          0|
+    |e_reg_638               |  32|   0|   32|          0|
+    |max_lim_reg_598         |  32|   0|   32|          0|
+    |min_lim_reg_612         |  32|   0|   32|          0|
+    |pid_addsub2_reg_698     |  32|   0|   32|          0|
+    |pid_mult_3_reg_683      |  32|   0|   32|          0|
+    |prev_x1                 |  32|   0|   32|          0|
+    |prev_x1_load_s_reg_678  |  32|   0|   32|          0|
+    |prev_x2                 |  32|   0|   32|          0|
+    |prev_x2_load_s_reg_668  |  32|   0|   32|          0|
+    |prev_yd                 |  32|   0|   32|          0|
+    |prev_yi                 |  32|   0|   32|          0|
+    |prev_yi_load_s_reg_693  |  32|   0|   32|          0|
+    |reg_191                 |  32|   0|   32|          0|
+    |reg_196                 |  32|   0|   32|          0|
+    |reg_204                 |  32|   0|   32|          0|
+    |tmp_12_reg_643          |   1|   0|    1|          0|
+    |tmp_14_reg_650          |   1|   0|    1|          0|
+    |tmp_20_reg_703          |   1|   0|    1|          0|
+    |tmp_23_reg_708          |   1|   0|    1|          0|
+    |tmp_27_reg_723          |   1|   0|    1|          0|
+    |tmp_29_reg_729          |   1|   0|    1|          0|
+    |tmp_32_reg_734          |   1|   0|    1|          0|
+    |tmp_4_reg_627           |   1|   0|    1|          0|
+    |tmp_6_reg_632           |   1|   0|    1|          0|
+    |tmp_9_reg_622           |   1|   0|    1|          0|
+    |w_reg_563               |  32|   0|   32|          0|
+    |y_reg_573               |  32|   0|   32|          0|
+    |yi_1_reg_718            |  32|   0|   32|          0|
+    +------------------------+----+----+-----+-----------+
+    |Total                   | 688|   0|  688|          0|
+    +------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+----------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++--------------+-----+-----+------------+----------------+--------------+
+|ap_clk        |  in |    1| ap_ctrl_hs | PID_Controller | return value |
+|ap_rst_n      |  in |    1| ap_ctrl_hs | PID_Controller | return value |
+|ap_start      |  in |    1| ap_ctrl_hs | PID_Controller | return value |
+|ap_done       | out |    1| ap_ctrl_hs | PID_Controller | return value |
+|ap_idle       | out |    1| ap_ctrl_hs | PID_Controller | return value |
+|ap_ready      | out |    1| ap_ctrl_hs | PID_Controller | return value |
+|InitN         |  in |    1|   ap_none  |      InitN     |    scalar    |
+|coeff_Addr_A  | out |   32|    bram    |      coeff     |     array    |
+|coeff_EN_A    | out |    1|    bram    |      coeff     |     array    |
+|coeff_WEN_A   | out |    4|    bram    |      coeff     |     array    |
+|coeff_Din_A   | out |   32|    bram    |      coeff     |     array    |
+|coeff_Dout_A  |  in |   32|    bram    |      coeff     |     array    |
+|coeff_Clk_A   | out |    1|    bram    |      coeff     |     array    |
+|coeff_Rst_A   | out |    1|    bram    |      coeff     |     array    |
+|din_Addr_A    | out |   32|    bram    |       din      |     array    |
+|din_EN_A      | out |    1|    bram    |       din      |     array    |
+|din_WEN_A     | out |    4|    bram    |       din      |     array    |
+|din_Din_A     | out |   32|    bram    |       din      |     array    |
+|din_Dout_A    |  in |   32|    bram    |       din      |     array    |
+|din_Clk_A     | out |    1|    bram    |       din      |     array    |
+|din_Rst_A     | out |    1|    bram    |       din      |     array    |
+|dout_Addr_A   | out |   32|    bram    |      dout      |     array    |
+|dout_EN_A     | out |    1|    bram    |      dout      |     array    |
+|dout_WEN_A    | out |    4|    bram    |      dout      |     array    |
+|dout_Din_A    | out |   32|    bram    |      dout      |     array    |
+|dout_Dout_A   |  in |   32|    bram    |      dout      |     array    |
+|dout_Clk_A    | out |    1|    bram    |      dout      |     array    |
+|dout_Rst_A    | out |    1|    bram    |      dout      |     array    |
++--------------+-----+-----+------------+----------------+--------------+
+

@@ -1,0 +1,15 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Thu Feb 14 10:18:12 -0600 2019
+# Command line  : sds++ -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/VivadoHLS_BinaryNet.o -MMD -MP -MFsrc/VivadoHLS_BinaryNet.d -MTsrc/VivadoHLS_BinaryNet.o -o src/VivadoHLS_BinaryNet.o ../src/VivadoHLS_BinaryNet.cpp -sds-hw BinaryNet VivadoHLS_BinaryNet.cpp -clkid 2 -sds-end -sds-hw layer0 VivadoHLS_BinaryNet.cpp -clkid 2 -sds-end -sds-hw layer1 VivadoHLS_BinaryNet.cpp -clkid 2 -sds-end -sds-hw layer2 VivadoHLS_BinaryNet.cpp -clkid 2 -sds-end -sds-hw layer3 VivadoHLS_BinaryNet.cpp -clkid 2 -sds-end -sds-hw layer4 VivadoHLS_BinaryNet.cpp -clkid 2 -sds-end -sds-hw layer5 VivadoHLS_BinaryNet.cpp -clkid 2 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs BinaryNet,layer0,layer1,layer2,layer3,layer4,layer5 -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds_VivadoHLS_BinaryNet.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds_VivadoHLS_BinaryNet.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds_VivadoHLS_BinaryNet.rpt
+#-----------------------------------------------------------
+
+High-Level Synthesis
+--------------------
+
+  Vivado HLS Report : file not found : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/vhls/BinaryNet layer0 layer1 layer2 layer3 layer4 layer5/solution/syn/report/BinaryNet layer0 layer1 layer2 layer3 layer4 layer5_csynth.rpt
+

@@ -1,0 +1,84 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sun Feb 10 19:27:44 -0600 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/DustinZhou/Documents/Xilinx/ip_cache -o eNormDist.elf ./src/normNdist.o ./src/norm_main.o -dmclkid 2 -perf-root main -perf-est swdata.xml -perf-funcs normdist -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/reports/sds.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/reports/sds.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# This file contains undocumented internal commands and is
+# provided for diagnostic purposes. To reproduce the results
+# of this run, please run the sds++ command line above again.
+#-----------------------------------------------------------
+
+# Removing implementation files from previous run
+# Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/normNdist.o.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/norm_main.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/.Xil/zed.hpfm    -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.cdb/xd_ip_db.xml  
+# Using prebuilt hardware
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+# Skipping block diagram (BD), address map, port information and device registration for partition 0
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+# Prepare hardware access API functions
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+# Create accelerator stub functions
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs
+# Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/portinfo.c
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/cf_stub.o
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs
+# Compile accelerator stub functions
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/libeNormDist.a C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/cf_stub.o 
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+# Enable generation of boot files
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs
+# Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/portinfo.c
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/cf_stub.o
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/libeNormDist.a C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/cf_stub.o 
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+# Link application ELF file
+arm-linux-gnueabihf-g++   C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/sw_perf_est.o  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/portinfo.o     -LC:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -LC:/Xilinx/SDx/2018.3/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/eNormDist.elf 
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/eNormDist.elf
+# Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/.accdata/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/.accdata/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.rtlx/normNdist.rtlx
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/.accdata/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/normdist.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/.accdata/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.pp/normNdist.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/.accdata/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.cdb/normdist.normdist.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/.accdata/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/iprepo/repo/xilinx_com_hls_normdist_1_0/xilinx_com_hls_normdist_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/iprepo/repo/xilinx_com_hls_normdist_1_0/xilinx_com_hls_normdist_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/iprepo/repo/xilinx_com_hls_normdist_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/.accdata/normNdist.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.cdb/normdist_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.data/norm_main.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/.Xil/zed.hpfm  -ip C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/iprepo/repo/xilinx_com_hls_normdist_1_0  -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.cdb/xd_ip_db.xml  
+# Generating data motion network
+C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/./src/normNdist.s C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/./src/norm_main.s
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm
+C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os linux -processor cortex-a9 -partition 0   -perfest
+cd C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug
+C:/Xilinx/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/hw_perf_est.xml  -r C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.cdb/xd_ip_db.xml  -est_ws C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est  -apsys C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/apsys_0.xml
+# sds++ completed at Sun Feb 10 19:28:39 -0600 2019

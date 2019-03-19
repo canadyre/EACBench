@@ -1,0 +1,108 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Thu Feb 14 10:42:41 -0600 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/DustinZhou/Documents/Xilinx/ip_cache -o eBNN.elf ./src/VivadoHLS_BinaryNet.o -dmclkid 2 -perf-root main -perf-est swdata.xml -perf-funcs BinaryNet,layer0,layer1,layer2,layer3,layer4,layer5 -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+#-----------------------------------------------------------
+# This file contains undocumented internal commands and is
+# provided for diagnostic purposes. To reproduce the results
+# of this run, please run the sds++ command line above again.
+#-----------------------------------------------------------
+
+# Removing implementation files from previous run
+# Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/VivadoHLS_BinaryNet.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/.Xil/zed.hpfm    -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  
+# Using prebuilt hardware
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+# Skipping block diagram (BD), address map, port information and device registration for partition 0
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+# Prepare hardware access API functions
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+# Create accelerator stub functions
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs
+# Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs
+# Compile accelerator stub functions
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libeBNN.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o 
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+# Enable generation of boot files
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs
+# Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libeBNN.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o 
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+# Link application ELF file
+arm-linux-gnueabihf-g++   C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.o  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o     -LC:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -LC:/Xilinx/SDx/2018.3/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/eBNN.elf 
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/eBNN.elf
+# Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.rtlx/VivadoHLS_BinaryNet.rtlx
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/BinaryNet.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.pp/VivadoHLS_BinaryNet.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/BinaryNet.BinaryNet.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/xilinx_com_hls_BinaryNet_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/xilinx_com_hls_BinaryNet_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/BinaryNet_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata1=alloc --only-section=.xddata1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer0.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap1=alloc --only-section=.xdfcnmap1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer0.layer0.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore1=alloc --only-section=.xdhlscore1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/xilinx_com_hls_layer0_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/xilinx_com_hls_layer0_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif1=alloc --only-section=.xdif1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer0_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata2=alloc --only-section=.xddata2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer1.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap2=alloc --only-section=.xdfcnmap2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer1.layer1.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore2=alloc --only-section=.xdhlscore2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/xilinx_com_hls_layer1_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/xilinx_com_hls_layer1_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif2=alloc --only-section=.xdif2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer1_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata3=alloc --only-section=.xddata3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer2.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap3=alloc --only-section=.xdfcnmap3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer2.layer2.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore3=alloc --only-section=.xdhlscore3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/xilinx_com_hls_layer2_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/xilinx_com_hls_layer2_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif3=alloc --only-section=.xdif3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer2_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata4=alloc --only-section=.xddata4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer3.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap4=alloc --only-section=.xdfcnmap4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer3.layer3.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore4=alloc --only-section=.xdhlscore4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/xilinx_com_hls_layer3_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/xilinx_com_hls_layer3_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif4=alloc --only-section=.xdif4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer3_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata5=alloc --only-section=.xddata5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer4.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap5=alloc --only-section=.xdfcnmap5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer4.layer4.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore5=alloc --only-section=.xdhlscore5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/xilinx_com_hls_layer4_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/xilinx_com_hls_layer4_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif5=alloc --only-section=.xdif5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer4_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata6=alloc --only-section=.xddata6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer5.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap6=alloc --only-section=.xdfcnmap6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer5.layer5.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore6=alloc --only-section=.xdhlscore6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/xilinx_com_hls_layer5_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/xilinx_com_hls_layer5_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif6=alloc --only-section=.xdif6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer5_if.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/.Xil/zed.hpfm  -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0  -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  
+# Generating data motion network
+C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/./src/VivadoHLS_BinaryNet.s
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm
+C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os linux -processor cortex-a9 -partition 0   -perfest
+cd C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug
+C:/Xilinx/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/hw_perf_est.xml  -r C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  -est_ws C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est  -apsys C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/apsys_0.xml
+# sds++ completed at Thu Feb 14 10:44:37 -0600 2019

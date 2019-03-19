@@ -1,0 +1,112 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sun Feb 10 17:16:01 -0600 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/DustinZhou/Documents/Xilinx/ip_cache -o eFIR.elf ./src/fir.o ./src/main.o -dmclkid 2 -perf-root main -perf-est swdata.xml -perf-funcs fir -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/reports/sds.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/reports/sds.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+Removing implementation files from previous run
+Libraries: 
+Library Paths {}
+Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/fir.o.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/main.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/main.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/main.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/main.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/.Xil/zed.hpfm    -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
+Using prebuilt hardware
+Skipping block diagram (BD), address map, port information and device registration for partition 0
+Prepare hardware access API functions
+Create accelerator stub functions
+Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.c
+C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
+C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
+   apf_perf_estimation_exit();
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/cf_stub.o
+Compile accelerator stub functions
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/libeFIR.a C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/cf_stub.o 
+Enable generation of boot files
+Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.c
+C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
+C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
+   apf_perf_estimation_exit();
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/cf_stub.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/libeFIR.a C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/cf_stub.o 
+Link application ELF file
+arm-linux-gnueabihf-g++   C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/sw_perf_est.o  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/main.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/portinfo.o     -LC:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -LC:/Xilinx/SDx/2018.3/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/eFIR.elf 
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/swstubs/eFIR.elf
+Libraries: 
+Library Paths {} {}
+Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/.accdata/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/.accdata/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.rtlx/fir.rtlx
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/.accdata/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/fir.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/.accdata/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.pp/fir.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/.accdata/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.cdb/fir.fir.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/.accdata/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/xilinx_com_hls_fir_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/xilinx_com_hls_fir_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/xilinx_com_hls_fir_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/constraints/a0_fir_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/hdl/verilog/a0_fir_delay_line.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/hdl/verilog/a0_fir_delay_line_ram.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/hdl/verilog/a0_fir_mul_32s_32s_3bkb.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/hdl/verilog/a0_fir.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/hdl/vhdl/a0_fir_delay_line.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/hdl/vhdl/a0_fir_mul_32s_32s_3bkb.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/hdl/vhdl/a0_fir.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/xgui/fir_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/.accdata/fir.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.cdb/fir_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/main.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/main.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est/main.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.data/main.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/.Xil/zed.hpfm  -ip C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0  -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/iprepo/repo/xilinx_com_hls_fir_1_0/component.xml
+ip_name: fir
+Generating data motion network
+C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/./src/fir.s C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/./src/main.s
+
+C:\Users\DustinZhou\Documents\Xilinx\eFIR\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/./src/fir.s C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/./src/main.s 
+
+C:\Users\DustinZhou\Documents\Xilinx\eFIR\Debug>exit /b 0 
+C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os linux -processor cortex-a9 -partition 0   -perfest
+
+C:\Users\DustinZhou\Documents\Xilinx\eFIR\Debug\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --dmclkid 2 --repo C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.3/data/DM.db -os linux -processor cortex-a9 -partition 0 -perfest  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
+INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
+INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
+INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
+INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
+INFO: [DMAnalysis 83-4452] Generating performance estimation for partition 0
+INFO: [DMAnalysis 83-4454] Rewriting caller code
+C:/Xilinx/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/hw_perf_est.xml  -r C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.cdb/xd_ip_db.xml  -est_ws C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/est  -apsys C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/.llvm/apsys_0.xml
+INFO: [PerfEst 83-3803] Software run information file swdata.xml not found. Continuing without comparison to software run data
+  For graph with functions: fir:main.cpp:13
+    Estimated hardware latency = 4980
+  Estimated resource usage:
+    dsps used = 39/220
+    bram used = 1/140
+    luts used = 1528/53200
+    FFs used = 3186/106400
+sds++ log file saved as C:/Users/DustinZhou/Documents/Xilinx/eFIR/Debug/_sds/reports/sds.log
+sds++ completed at Sun Feb 10 17:16:59 -0600 2019

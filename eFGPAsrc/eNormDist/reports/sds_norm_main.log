@@ -1,0 +1,592 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Sun Feb 10 19:26:39 -0600 2019
+# Command line  : sds++ -Wall -O0 -g -I../src -c -fmessage-length=0 -MTsrc/norm_main.o -MMD -MP -MFsrc/norm_main.d -MTsrc/norm_main.o -o src/norm_main.o ../src/norm_main.cpp -sds-hw normdist normNdist.cpp -clkid 2 -sds-end -perf-root main -perf-est swdata.xml -perf-funcs normdist -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/reports/sds_norm_main.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/reports/sds_norm_main.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/reports/sds_norm_main.rpt
+#-----------------------------------------------------------
+
+C:/Xilinx/SDx/2018.3/bin/perf_instrumenter  -r main  -funclist normdist  -tempfunclist normdist  -w C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est  -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/unix_norm_main.cpp  --  -c  -I C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Analyzing source for RTL template usage
+C:/Xilinx/SDx/2018.3/bin/rtl_template_extract  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp  -save-query C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/src/norm_main.rtlx  --  -c  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+C:/Xilinx/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11  -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/src/norm_main.s
+
+C:\Users\DustinZhou\Documents\Xilinx\eNormDist\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/src/norm_main.s 
+C:/Xilinx/Vivado/2018.3/include\ap_int_special.h:89:1: warning: 'complex' defined as a struct template here but previously declared as a class template [-Wmismatched-tags]
+struct complex<ap_int<_AP_W> > {
+^
+C:/Xilinx/Vivado/2018.3/include\ap_int_special.h:61:24: note: did you mean struct here?
+template<typename _Tp> class complex;
+                       ^~~~~
+                       struct
+C:/Xilinx/Vivado/2018.3/include\ap_fixed_special.h:89:1: warning: 'complex' defined as a struct template here but previously declared as a class template [-Wmismatched-tags]
+struct complex<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> > {
+^
+C:/Xilinx/Vivado/2018.3/include\ap_fixed_special.h:61:24: note: did you mean struct here?
+template<typename _Tp> class complex;
+                       ^~~~~
+                       struct
+C:/Xilinx/Vivado/2018.3/include\ap_int_special.h:61:24: note: did you mean struct here?
+template<typename _Tp> class complex;
+                       ^~~~~
+                       struct
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:973:26: warning: unused variable 'wf' [-Wunused-variable]
+        const static int wf = 5;
+                         ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1171:30: warning: unused variable 'Maxprecision' [-Wunused-variable]
+            const static int Maxprecision = 25;//we+FO_+g=11+12+2=25
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1170:30: warning: unused variable 'g' [-Wunused-variable]
+            const static int g = 2;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1320:30: warning: unused variable 'Maxprecision' [-Wunused-variable]
+            const static int Maxprecision = 51;//24+23+4 = 51
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1319:30: warning: unused variable 'g' [-Wunused-variable]
+            const static int g=4;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1618:30: warning: unused variable 'Maxprecision' [-Wunused-variable]
+            const static int Maxprecision=69;//33+32+4;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1617:30: warning: unused variable 'g' [-Wunused-variable]
+            const static int g=4;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:58:21: warning: unknown pragma ignored [-Wunknown-pragmas]
+            #pragma UNROLL        
+                    ^
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:208:21: warning: unknown pragma ignored [-Wunknown-pragmas]
+            #pragma UNROLL        
+                    ^
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:273:21: warning: unknown pragma ignored [-Wunknown-pragmas]
+            #pragma UNROLL        
+                    ^
+C:/Xilinx/Vivado/2018.3/include/hls_frexp_apfixed.h:69:5: warning: unused label 'CLZ_LOOP' [-Wunused-label]
+    CLZ_LOOP:
+    ^~~~~~~~~
+
+C:\Users\DustinZhou\Documents\Xilinx\eNormDist\Debug>exit /b 0 
+Compiling C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp
+arm-linux-gnueabihf-g++ -c -I../src -Wall -O0 -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/src/norm_main.o -MFC:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/src/norm_main.d -MTC:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/src/norm_main.o -I C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src -I C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp -o src/norm_main.o
+                 from C:/Xilinx/Vivado/2018.3/include/hls_math.h:1023,
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:93:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:99:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:102:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:168:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:174:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:177:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:191:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:198:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:261:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:267:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:270:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:284:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:291:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:518:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:524:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:527:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:536:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:539:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:548:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:555:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:914:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:920:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:923:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1038:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1044:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1047:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1133:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1139:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1142:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1160:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1166:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1280:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1286:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1289:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1308:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1315:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1575:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1581:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1584:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1607:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1613:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2041:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2047:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2050:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2179:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2186:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2190:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2237:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2244:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2248:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2266:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2321:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2328:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2332:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2350:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2439:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2446:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2450:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2460:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2464:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2475:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2483:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2808:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2815:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:2819:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+                 #pragma unroll
+ 
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_log_apfixed.h:727:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_log_apfixed.h:945:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:265:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:293:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+         #pragma unroll
+ 
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_pow_apfixed.h:74:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_pow_apfixed.h:133:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+     #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_pow_apfixed.h:146:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_pow_apfixed.h:176:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+             #pragma unroll
+ 
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:58:0: warning: ignoring #pragma UNROLL  [-Wunknown-pragmas]
+             #pragma UNROLL
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:208:0: warning: ignoring #pragma UNROLL  [-Wunknown-pragmas]
+             #pragma UNROLL
+ 
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:273:0: warning: ignoring #pragma UNROLL  [-Wunknown-pragmas]
+             #pragma UNROLL
+ 
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_lgamma_apfixed.h:255:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+     #pragma unroll
+ 
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_tgamma_apfixed.h:145:0: warning: ignoring #pragma unroll  [-Wunknown-pragmas]
+ #pragma unroll
+ 
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+                 from ../src/normNdist.h:9,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h: In function 'ap_fixed<_AP_W2, _AP_I2> sqrt_fixed(ap_fixed<_AP_W2, _AP_I2>)':
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:323:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if ( x_l_FL < mul_FL )            x_l_FL_l[prcs/2] = 1;
+                 ^~
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:324:51: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                                                   x_l_FL_l        -= mul_FL;
+                                                   ^~~~~~~~
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:332:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if ( x_l_FL < mul_FL )                                       delta[0]         = 1;
+                 ^~
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:333:78: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                                                                              x_l_FH_l        -= delta;
+                                                                              ^~~~~~~~
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:338:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if ( (x_l_FH<mul_FH)||((x_l_FH==mul_FH)&&(x_l_FL<mul_FL)) )  x_l_I           --;
+                 ^~
+C:/Xilinx/Vivado/2018.3/include/hls_sqrt_apfixed.h:339:78: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                                                                              x_l_I           -= mul_I;
+                                                                              ^~~~~
+                 from C:/Xilinx/Vivado/2018.3/include/ap_int.h:54,
+                 from ../src/normNdist.h:7,
+                 from C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:31:
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 32; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1482:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(unsigned int) [with int _AP_W = 32; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:284:3:   required from 'ap_uint<_AP_W>::ap_uint(unsigned int) [with int _AP_W = 32]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:310:31:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+             : (excess_bits ? (((uint64_t)VAL) << (excess_bits)) >> (excess_bits)
+               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            : (uint64_t)VAL));
+                            ~~~~~~~~~~~~~~~~
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 1; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 1; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:283:3:   required from 'ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 1]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:377:18:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 8; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 8; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:283:3:   required from 'ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 8]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:378:18:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 23; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 23; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:283:3:   required from 'ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 23]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:379:17:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 11; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 11; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:283:3:   required from 'ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 11]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:535:18:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 52; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 52; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:283:3:   required from 'ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 52]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:536:17:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 16; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1480:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(short unsigned int) [with int _AP_W = 16; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:282:3:   required from 'ap_uint<_AP_W>::ap_uint(short unsigned int) [with int _AP_W = 16]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:634:49:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 5; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 5; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:283:3:   required from 'ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 5]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:695:18:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 10; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 10; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:283:3:   required from 'ap_uint<_AP_W>::ap_uint(int) [with int _AP_W = 10]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:696:17:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 16; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 16; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:151:3:   required from 'ap_int<_AP_W>::ap_int(int) [with int _AP_W = 16]'
+C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/est/norm_main.cpp:91:24:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 32; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1481:1:   required from 'ap_private<_AP_W, _AP_S, true>& ap_private<_AP_W, _AP_S, true>::operator=(int) [with int _AP_W = 32; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:245:3:   required from 'ap_int_base<_AP_W, _AP_S>::ap_int_base(int) [with int _AP_W = 32; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:1469:1:   required from 'typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_int, true>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, int) [with int _AP_W = 8; bool _AP_S = false; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_int, true>::minus = ap_int<33>]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:339:20:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 33; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1426:20:   required from 'ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 34; bool _AP_S1 = true; int _AP_W = 33; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:1356:1:   required from 'typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W = 8; bool _AP_S = false; int _AP_W2 = 32; bool _AP_S2 = true; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus = ap_int<33>]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:1469:1:   required from 'typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_int, true>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, int) [with int _AP_W = 8; bool _AP_S = false; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_int, true>::minus = ap_int<33>]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:339:20:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 20; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1426:20:   required from 'ap_private<_AP_W, _AP_S>& ap_private<_AP_W, _AP_S, true>::operator=(const ap_private<_AP_W1, _AP_S1>&) [with int _AP_W1 = 52; bool _AP_S1 = false; int _AP_W = 20; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:366:13:   required from 'ap_int_base<_AP_W, _AP_S>::ap_int_base(const ap_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 52; bool _AP_S2 = false; int _AP_W = 20; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_int.h:219:69:   required from 'ap_uint<_AP_W>::ap_uint(const ap_range_ref<_AP_W2, _AP_S2>&) [with int _AP_W2 = 52; bool _AP_S2 = false; int _AP_W = 20]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:505:25:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 34; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1647:3:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(ap_slong) [with int _AP_W = 34; bool _AP_S = true; ap_slong = long long int]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2078:46:   required from 'typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::minus ap_private<_AP_W, _AP_S, true>::operator-(const ap_private<_AP_W1, _AP_S1>&) const [with int _AP_W1 = 33; bool _AP_S1 = true; int _AP_W = 33; bool _AP_S = true; typename ap_private<_AP_W, _AP_S, true>::RType<_AP_W2, _AP_S2>::minus = ap_private<34, true, true>]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:1356:1:   required from 'typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, const ap_int_base<_AP_W3, _AP_S3>&) [with int _AP_W = 8; bool _AP_S = false; int _AP_W2 = 32; bool _AP_S2 = true; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_W2, _AP_S2>::minus = ap_int<33>]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:1469:1:   required from 'typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_int, true>::minus operator-(const ap_int_base<_AP_W2, _AP_S2>&, int) [with int _AP_W = 8; bool _AP_S = false; typename ap_int_base<_AP_W, _AP_S>::RType<_AP_SIZE_int, true>::minus = ap_int<33>]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:339:20:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 24; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1627:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private() [with int _AP_W = 24; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_common.h:637:18:   required from 'ssdm_int_sim<_AP_W, _AP_S>::ssdm_int_sim() [with int _AP_W = 24; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:540:3:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(int) [with int _AP_W = 24; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:320:3:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(int) [with int _AP_W = 24; int _AP_I = 1; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:363:37:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 6; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1640:3:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(unsigned char) [with int _AP_W = 6; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:3014:30:   required from 'std::__cxx11::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t, bool) const [with int _AP_W = 23; bool _AP_S = false; std::__cxx11::string = std::__cxx11::basic_string<char>; uint8_t = unsigned char]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2930:20:   required from 'std::__cxx11::string ap_private<_AP_W, _AP_S, true>::to_string(uint8_t, bool) const [with int _AP_W = 23; bool _AP_S = false; std::__cxx11::string = std::__cxx11::basic_string<char>; uint8_t = unsigned char]'
+C:/Xilinx/Vivado/2018.3/include/ap_int_base.h:1292:40:   required from 'std::__cxx11::string ap_int_base<_AP_W, _AP_S>::to_string(signed char, bool) const [with int _AP_W = 23; bool _AP_S = false; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:405:28:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 53; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1627:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private() [with int _AP_W = 53; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_common.h:637:18:   required from 'ssdm_int_sim<_AP_W, _AP_S>::ssdm_int_sim() [with int _AP_W = 53; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:540:3:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(int) [with int _AP_W = 53; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:320:3:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(int) [with int _AP_W = 53; int _AP_I = 1; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:520:37:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 24; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1658:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>&) [with int _AP_W1 = 23; bool _AP_S1 = false; bool _AP_OPT = true; int _AP_W = 24; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1757:38:   required from 'ap_private<(_AP_W + (! _AP_S)), true> ap_private<_AP_W, _AP_S, true>::operator~() const [with int _AP_W = 23; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:365:21:   required from 'void ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::overflow_adjust(bool, bool, bool, bool) [with int _AP_W = 23; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:792:22:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 24; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 23; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:430:14:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 24; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 23; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:231:16:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 24; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 23; int _AP_I = 0; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:359:45:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 25; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1658:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>&) [with int _AP_W1 = 24; bool _AP_S1 = false; bool _AP_OPT = true; int _AP_W = 25; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1757:38:   required from 'ap_private<(_AP_W + (! _AP_S)), true> ap_private<_AP_W, _AP_S, true>::operator~() const [with int _AP_W = 24; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:365:21:   required from 'void ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::overflow_adjust(bool, bool, bool, bool) [with int _AP_W = 24; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:792:22:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 32; int _AP_I2 = 32; bool _AP_S2 = true; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 24; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:540:3:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(int) [with int _AP_W = 24; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:320:3:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(int) [with int _AP_W = 24; int _AP_I = 1; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:363:37:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 53; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1658:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>&) [with int _AP_W1 = 52; bool _AP_S1 = false; bool _AP_OPT = true; int _AP_W = 53; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1757:38:   required from 'ap_private<(_AP_W + (! _AP_S)), true> ap_private<_AP_W, _AP_S, true>::operator~() const [with int _AP_W = 52; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:365:21:   required from 'void ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::overflow_adjust(bool, bool, bool, bool) [with int _AP_W = 52; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:792:22:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 53; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 52; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:430:14:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 53; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 52; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:231:16:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 53; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 52; int _AP_I = 0; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:516:45:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 54; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1658:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>&) [with int _AP_W1 = 53; bool _AP_S1 = false; bool _AP_OPT = true; int _AP_W = 54; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1757:38:   required from 'ap_private<(_AP_W + (! _AP_S)), true> ap_private<_AP_W, _AP_S, true>::operator~() const [with int _AP_W = 53; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:365:21:   required from 'void ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::overflow_adjust(bool, bool, bool, bool) [with int _AP_W = 53; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:792:22:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 32; int _AP_I2 = 32; bool _AP_S2 = true; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 53; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:540:3:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(int) [with int _AP_W = 53; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:320:3:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(int) [with int _AP_W = 53; int _AP_I = 1; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:520:37:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 11; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1658:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>&) [with int _AP_W1 = 10; bool _AP_S1 = false; bool _AP_OPT = true; int _AP_W = 11; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1757:38:   required from 'ap_private<(_AP_W + (! _AP_S)), true> ap_private<_AP_W, _AP_S, true>::operator~() const [with int _AP_W = 10; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:365:21:   required from 'void ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::overflow_adjust(bool, bool, bool, bool) [with int _AP_W = 10; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:792:22:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 11; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 10; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:430:14:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 11; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 10; int _AP_I = 0; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:231:16:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 11; int _AP_I2 = 1; bool _AP_S2 = false; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 10; int _AP_I = 0; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:676:45:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 12; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1658:20:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(const ap_private<_AP_W1, _AP_S1, _AP_OPT>&) [with int _AP_W1 = 11; bool _AP_S1 = false; bool _AP_OPT = true; int _AP_W = 12; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:1757:38:   required from 'ap_private<(_AP_W + (! _AP_S)), true> ap_private<_AP_W, _AP_S, true>::operator~() const [with int _AP_W = 11; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:365:21:   required from 'void ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::overflow_adjust(bool, bool, bool, bool) [with int _AP_W = 11; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:792:22:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>& ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::operator=(const ap_fixed_base<_AP_W2, _AP_I2, _AP_S2, _AP_Q2, _AP_O2, _AP_N2>&) [with int _AP_W2 = 32; int _AP_I2 = 32; bool _AP_S2 = true; ap_q_mode _AP_Q2 = (ap_q_mode)5; ap_o_mode _AP_O2 = (ap_o_mode)3; int _AP_N2 = 0; int _AP_W = 11; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed_base.h:540:3:   required from 'ap_fixed_base<_AP_W, _AP_I, _AP_S, _AP_Q, _AP_O, _AP_N>::ap_fixed_base(int) [with int _AP_W = 11; int _AP_I = 1; bool _AP_S = false; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/ap_fixed.h:320:3:   required from 'ap_ufixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N>::ap_ufixed(int) [with int _AP_W = 11; int _AP_I = 1; ap_q_mode _AP_Q = (ap_q_mode)5; ap_o_mode _AP_O = (ap_o_mode)3; int _AP_N = 0]'
+C:/Xilinx/Vivado/2018.3/include/utils/x_hls_utils.h:680:37:   required from here
+C:/Xilinx/Vivado/2018.3/include/etc/ap_private.h:2140:28: warning: enum constant in boolean context [-Wint-in-bool-context]
+Analyzing source for RTL template usage
+C:/Xilinx/SDx/2018.3/bin/rtl_template_extract  C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp  -save-query C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/src/norm_main.rtlx  --  -c  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  
+    -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -w      -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11
+Create data motion intermediate representation
+C:/Xilinx/SDx/2018.3/bin/clang_wrapper  -I../src  -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__  -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include   -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11  -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/src/norm_main.s
+
+C:\Users\DustinZhou\Documents\Xilinx\eNormDist\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\clang.exe -I../src -Wall -g -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.3/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1 -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.3.1/backward -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.3.1/include-fixed -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.3/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp -o C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/.llvm/src/norm_main.s 
+C:/Xilinx/Vivado/2018.3/include\ap_int_special.h:89:1: warning: 'complex' defined as a struct template here but previously declared as a class template [-Wmismatched-tags]
+struct complex<ap_int<_AP_W> > {
+^
+C:/Xilinx/Vivado/2018.3/include\ap_int_special.h:61:24: note: did you mean struct here?
+template<typename _Tp> class complex;
+                       ^~~~~
+                       struct
+C:/Xilinx/Vivado/2018.3/include\ap_fixed_special.h:89:1: warning: 'complex' defined as a struct template here but previously declared as a class template [-Wmismatched-tags]
+struct complex<ap_fixed<_AP_W, _AP_I, _AP_Q, _AP_O, _AP_N> > {
+^
+C:/Xilinx/Vivado/2018.3/include\ap_fixed_special.h:61:24: note: did you mean struct here?
+template<typename _Tp> class complex;
+                       ^~~~~
+                       struct
+C:/Xilinx/Vivado/2018.3/include\ap_int_special.h:61:24: note: did you mean struct here?
+template<typename _Tp> class complex;
+                       ^~~~~
+                       struct
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:973:26: warning: unused variable 'wf' [-Wunused-variable]
+        const static int wf = 5;
+                         ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1171:30: warning: unused variable 'Maxprecision' [-Wunused-variable]
+            const static int Maxprecision = 25;//we+FO_+g=11+12+2=25
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1170:30: warning: unused variable 'g' [-Wunused-variable]
+            const static int g = 2;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1320:30: warning: unused variable 'Maxprecision' [-Wunused-variable]
+            const static int Maxprecision = 51;//24+23+4 = 51
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1319:30: warning: unused variable 'g' [-Wunused-variable]
+            const static int g=4;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1618:30: warning: unused variable 'Maxprecision' [-Wunused-variable]
+            const static int Maxprecision=69;//33+32+4;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_exp_apfixed.h:1617:30: warning: unused variable 'g' [-Wunused-variable]
+            const static int g=4;
+                             ^
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:58:21: warning: unknown pragma ignored [-Wunknown-pragmas]
+            #pragma UNROLL        
+                    ^
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:208:21: warning: unknown pragma ignored [-Wunknown-pragmas]
+            #pragma UNROLL        
+                    ^
+C:/Xilinx/Vivado/2018.3/include/hls_diff_apfixed.h:273:21: warning: unknown pragma ignored [-Wunknown-pragmas]
+            #pragma UNROLL        
+                    ^
+C:/Xilinx/Vivado/2018.3/include/hls_frexp_apfixed.h:69:5: warning: unused label 'CLZ_LOOP' [-Wunused-label]
+    CLZ_LOOP:
+    ^~~~~~~~~
+
+C:\Users\DustinZhou\Documents\Xilinx\eNormDist\Debug>exit /b 0 
+Compiling C:/Users/DustinZhou/Documents/Xilinx/eNormDist/src/norm_main.cpp
+arm-linux-gnueabihf-objcopy --add-section .xdsdata=C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/swstubs/norm_main.o.xml src/norm_main.o
+sds++ log file saved as C:/Users/DustinZhou/Documents/Xilinx/eNormDist/Debug/_sds/reports/sds_norm_main.log
+sds++ completed at Sun Feb 10 19:27:42 -0600 2019

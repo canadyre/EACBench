@@ -1,0 +1,419 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.3 SW Build 2405991 on Thu Dec  6 23:39:10 MST 2018
+# Start time    : Thu Feb 14 10:42:41 -0600 2019
+# Command line  : sds++ --remote_ip_cache C:/Users/DustinZhou/Documents/Xilinx/ip_cache -o eBNN.elf ./src/VivadoHLS_BinaryNet.o -dmclkid 2 -perf-root main -perf-est swdata.xml -perf-funcs BinaryNet,layer0,layer1,layer2,layer3,layer4,layer5 -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds.log
+# Journal file  : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds.jou
+# Report file   : C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+Removing implementation files from previous run
+Libraries: 
+Library Paths {}
+Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdsdata=alloc --only-section=.xdsdata C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/VivadoHLS_BinaryNet.o.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/.Xil/zed.hpfm    -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
+Using prebuilt hardware
+Skipping block diagram (BD), address map, port information and device registration for partition 0
+Prepare hardware access API functions
+Create accelerator stub functions
+Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c
+C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
+C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
+   apf_perf_estimation_exit();
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o
+Compile accelerator stub functions
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libeBNN.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o 
+Enable generation of boot files
+Compile hardware access API functions
+arm-linux-gnueabihf-gcc  -DPERF_EST       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c
+C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c: In function 'p_NIL_cf_framework_close':
+C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.c:51:3: warning: implicit declaration of function 'apf_perf_estimation_exit' [-Wimplicit-function-declaration]
+   apf_perf_estimation_exit();
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+arm-linux-gnueabihf-g++        -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.c
+arm-linux-gnueabihf-gcc       -I C:/Xilinx/SDx/2018.3/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.3/include -c  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.c -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libxlnk_stub.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o
+arm-linux-gnueabihf-ar crs C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/libeBNN.a C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/cf_stub.o 
+Link application ELF file
+arm-linux-gnueabihf-g++   C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/sw_perf_est.o  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/portinfo.o     -LC:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs -Wl,--start-group  -Wl,--end-group -Wl,--start-group    -lpthread -LC:/Xilinx/SDx/2018.3/target/aarch32-linux/lib -lsds_lib -lxlnk_stub  -Wl,--end-group -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/eBNN.elf 
+arm-linux-gnueabihf-objcopy -R .xdinfo -R .xddata -R .xdasm -R .xdfcnmap -R .xdhlscore -R .xdif -R .xdparams -R .xdcore -R .xdrepo -R .xdsdata -R .xdpp -R .xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/swstubs/eBNN.elf
+Libraries: 
+Library Paths {} {}
+Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdrtlx=alloc --only-section=.xdrtlx C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.rtlx/VivadoHLS_BinaryNet.rtlx
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/BinaryNet.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.pp/VivadoHLS_BinaryNet.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/BinaryNet.BinaryNet.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/xilinx_com_hls_BinaryNet_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/xilinx_com_hls_BinaryNet_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/xilinx_com_hls_BinaryNet_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/constraints/a0_BinaryNet_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_1_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_1_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_2_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_2_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_3_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_3_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_4_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_4_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_5_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_bias_5_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbdEe.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbdEe_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbfYi.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbfYi_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbg8j.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbg8j_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbhbi.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbhbi_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbibs.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbibs_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbjbC.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cnct_tbjbC_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_bkb.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_bkb_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_cud.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_cud_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_eOg.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_eOg_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_kbM.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_kbM_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_lbW.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_lbW_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_mb6.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_mb6_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_ncg.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_ncg_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_ocq.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_ocq_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_pcA.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_pcA_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_qcK.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_qcK_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_rcU.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_rcU_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_sc4.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_sc4_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_tde.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_tde_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_udo.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_udo_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_vdy.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_vdy_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_wdI.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_wdI_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_xdS.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_xdS_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_yd2.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_coef_w_yd2_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cumsum_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_cumsum_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_mux_47_Ffa.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_mux_325Ee0.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_result.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_src_0_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_tensor0zec.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_tensor1Aem.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_tensor2Bew.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_tensor3CeG.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_tensor4DeQ.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_tmp_0_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_tmp_1_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet_win_0_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/verilog/a0_BinaryNet.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_bias_1_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_bias_2_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_bias_3_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_bias_4_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_bias_5_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_cnct_tbdEe.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_cnct_tbfYi.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_cnct_tbg8j.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_cnct_tbhbi.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_cnct_tbibs.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_cnct_tbjbC.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_bkb.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_cud.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_eOg.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_kbM.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_lbW.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_mb6.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_ncg.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_ocq.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_pcA.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_qcK.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_rcU.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_sc4.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_tde.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_udo.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_vdy.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_wdI.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_xdS.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_coef_w_yd2.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_cumsum_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_mux_47_Ffa.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_mux_325Ee0.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_result.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_src_0_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_tensor0zec.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_tensor1Aem.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_tensor2Bew.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_tensor3CeG.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_tensor4DeQ.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_tmp_0_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_tmp_1_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet_win_0_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/hdl/vhdl/a0_BinaryNet.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/xgui/BinaryNet_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/BinaryNet_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata1=alloc --only-section=.xddata1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer0.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap1=alloc --only-section=.xdfcnmap1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer0.layer0.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore1=alloc --only-section=.xdhlscore1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/xilinx_com_hls_layer0_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/xilinx_com_hls_layer0_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/xilinx_com_hls_layer0_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/constraints/a1_layer0_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/hdl/verilog/a1_layer0_coef_w_0_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/hdl/verilog/a1_layer0_coef_w_0_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/hdl/verilog/a1_layer0_win_0_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/hdl/verilog/a1_layer0.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/hdl/vhdl/a1_layer0_coef_w_0_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/hdl/vhdl/a1_layer0_win_0_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/hdl/vhdl/a1_layer0.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/xgui/layer0_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif1=alloc --only-section=.xdif1 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer0_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata2=alloc --only-section=.xddata2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer1.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap2=alloc --only-section=.xdfcnmap2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer1.layer1.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore2=alloc --only-section=.xdhlscore2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/xilinx_com_hls_layer1_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/xilinx_com_hls_layer1_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/xilinx_com_hls_layer1_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/constraints/a2_layer1_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/verilog/a2_layer1_bias_1_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/verilog/a2_layer1_bias_1_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/verilog/a2_layer1_coef_w_1_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/verilog/a2_layer1_coef_w_1_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/verilog/a2_layer1.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/vhdl/a2_layer1_bias_1_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/vhdl/a2_layer1_coef_w_1_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/hdl/vhdl/a2_layer1.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/xgui/layer1_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif2=alloc --only-section=.xdif2 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer1_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata3=alloc --only-section=.xddata3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer2.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap3=alloc --only-section=.xdfcnmap3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer2.layer2.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore3=alloc --only-section=.xdhlscore3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/xilinx_com_hls_layer2_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/xilinx_com_hls_layer2_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/xilinx_com_hls_layer2_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/constraints/a3_layer2_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_bias_2_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_bias_2_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_0.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_0_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_1.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_1_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_2.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_2_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_3.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_3_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_4.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_4_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_5.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cnct_tbl_V_5_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_coef_w_2_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_coef_w_2_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cumsum_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2_cumsum_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/verilog/a3_layer2.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_bias_2_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_cnct_tbl_V_0.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_cnct_tbl_V_1.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_cnct_tbl_V_2.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_cnct_tbl_V_3.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_cnct_tbl_V_4.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_cnct_tbl_V_5.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_coef_w_2_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2_cumsum_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/hdl/vhdl/a3_layer2.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/xgui/layer2_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif3=alloc --only-section=.xdif3 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer2_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata4=alloc --only-section=.xddata4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer3.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap4=alloc --only-section=.xdfcnmap4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer3.layer3.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore4=alloc --only-section=.xdhlscore4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/xilinx_com_hls_layer3_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/xilinx_com_hls_layer3_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/xilinx_com_hls_layer3_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/constraints/a4_layer3_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/verilog/a4_layer3_bias_3_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/verilog/a4_layer3_bias_3_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/verilog/a4_layer3_coef_w_3_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/verilog/a4_layer3_coef_w_3_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/verilog/a4_layer3.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/vhdl/a4_layer3_bias_3_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/vhdl/a4_layer3_coef_w_3_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/hdl/vhdl/a4_layer3.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/xgui/layer3_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif4=alloc --only-section=.xdif4 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer3_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata5=alloc --only-section=.xddata5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer4.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap5=alloc --only-section=.xdfcnmap5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer4.layer4.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore5=alloc --only-section=.xdhlscore5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/xilinx_com_hls_layer4_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/xilinx_com_hls_layer4_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/xilinx_com_hls_layer4_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/constraints/a5_layer4_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_bias_4_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_bias_4_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_0.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_0_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_1.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_1_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_2.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_2_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_3.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_coef_w_4_V_3_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_mux_47_22_bkb.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_tmp_0_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4_tmp_1_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/verilog/a5_layer4.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_bias_4_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_coef_w_4_V_0.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_coef_w_4_V_1.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_coef_w_4_V_2.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_coef_w_4_V_3.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_mux_47_22_bkb.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_tmp_0_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4_tmp_1_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/hdl/vhdl/a5_layer4.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/xgui/layer4_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif5=alloc --only-section=.xdif5 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer4_if.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata6=alloc --only-section=.xddata6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.data/layer5.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap6=alloc --only-section=.xdfcnmap6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer5.layer5.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore6=alloc --only-section=.xdhlscore6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/xilinx_com_hls_layer5_1_0.zip
+C:/Xilinx/SDx/2018.3/bin/unzip.bat -u -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/xilinx_com_hls_layer5_1_0.zip -d C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0
+Archive:  C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/xilinx_com_hls_layer5_1_0.zip
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/component.xml  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/constraints/a6_layer5_ooc.xdc  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_bias_5_V.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_bias_5_V_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_0.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_0_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_1.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_1_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_2.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_2_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_3.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_3_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_4.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_4_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_5.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_5_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_6.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_6_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_7.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_7_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_8.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_8_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_9.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_coef_w_5_V_9_rom.dat  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5_result.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/verilog/a6_layer5.v  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_bias_5_V.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_0.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_1.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_2.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_3.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_4.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_5.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_6.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_7.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_8.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_coef_w_5_V_9.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5_result.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/hdl/vhdl/a6_layer5.vhd  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/misc/logo.png  
+  inflating: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/xgui/layer5_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif6=alloc --only-section=.xdif6 C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est/.accdata/VivadoHLS_BinaryNet.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/layer5_if.xml
+C:/Xilinx/SDx/2018.3/bin/build_xd_ip_db -ip_search 0  -sds-pf C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/.Xil/zed.hpfm  -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0 -ip C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0  -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.3
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_BinaryNet_1_0/component.xml
+ip_name: BinaryNet
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer0_1_0/component.xml
+ip_name: layer0
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer1_1_0/component.xml
+ip_name: layer1
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer2_1_0/component.xml
+ip_name: layer2
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer3_1_0/component.xml
+ip_name: layer3
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer4_1_0/component.xml
+ip_name: layer4
+processing accelerators: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0
+ip_dir: C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0
+C:/Xilinx/SDx/2018.3/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.3/scripts/xdcc/xpathValueOf.xsl C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/iprepo/repo/xilinx_com_hls_layer5_1_0/component.xml
+ip_name: layer5
+Generating data motion network
+C:/Xilinx/SDx/2018.3/bin/llvm-link -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/./src/VivadoHLS_BinaryNet.s
+
+C:\Users\DustinZhou\Documents\Xilinx\eBNN\Debug>C:\Xilinx\SDx\2018.3\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/sds_all.o C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/./src/VivadoHLS_BinaryNet.s 
+
+C:\Users\DustinZhou\Documents\Xilinx\eBNN\Debug>exit /b 0 
+C:/Xilinx/SDx/2018.3/bin/XidanePass  --dmclkid 2  --repo C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.3/data/DM.db   -os linux -processor cortex-a9 -partition 0   -perfest
+
+C:\Users\DustinZhou\Documents\Xilinx\eBNN\Debug\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --dmclkid 2 --repo C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.3/data/DM.db -os linux -processor cortex-a9 -partition 0 -perfest  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+INFO: [DMAnalysis 83-4497] Analyzing callers to hardware accelerators...
+INFO: [DMAnalysis 83-4444] Scheduling data transfer graph for partition 0
+INFO: [DMAnalysis 83-4446] Creating data motion network hardware for partition 0
+INFO: [DMAnalysis 83-4448] Creating software stub functions for partition 0
+INFO: [DMAnalysis 83-4450] Generating data motion network report for partition 0
+INFO: [DMAnalysis 83-4452] Generating performance estimation for partition 0
+INFO: [DMAnalysis 83-4454] Rewriting caller code
+C:/Xilinx/SDx/2018.3/bin/perf_est  -s swdata.xml  -hw C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/hw_perf_est.xml  -r C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.cdb/xd_ip_db.xml  -est_ws C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/est  -apsys C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/.llvm/apsys_0.xml
+INFO: [PerfEst 83-3803] Software run information file swdata.xml not found. Continuing without comparison to software run data
+  For graph with functions: BinaryNet:VivadoHLS_BinaryNet.cpp:61
+    Estimated hardware latency = 1189518
+  For graph with functions: layer0:VivadoHLS_BinaryNet.cpp:127 layer1:VivadoHLS_BinaryNet.cpp:130 layer2:VivadoHLS_BinaryNet.cpp:133 layer3:VivadoHLS_BinaryNet.cpp:136 layer4:VivadoHLS_BinaryNet.cpp:139 layer5:VivadoHLS_BinaryNet.cpp:143
+    Estimated hardware latency = 1957945
+  Estimated resource usage:
+    dsps used = 0/220
+    bram used = 61/140
+    luts used = 44572/53200
+    FFs used = 15044/106400
+sds++ log file saved as C:/Users/DustinZhou/Documents/Xilinx/eBNN/Debug/_sds/reports/sds.log
+sds++ completed at Thu Feb 14 10:44:37 -0600 2019

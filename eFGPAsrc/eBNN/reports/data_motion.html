@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td
+    {
+      border-collapse:collapse;
+      border:1px solid black;
+    }
+    th, td
+    {
+      padding:5px;
+    }
+    p
+    {
+      font-size:200%
+    }
+  </style>
+  <title> Data Motion Network Report </title>
+</head>
+<body>
+<p>Partition 0</p>
+<sup><strong>Note:</strong> "(size)" may show up in the Declared/Transfer Size of an argument if the actual array size was not present in the C/C++ source code, most likely the argument is a pointer.<br>
+     * - Line number under Callsite with an asterisk * is based on the generated source file located at .../_sds/.llvm.  It is not based on the original source file.</sup><table>
+<caption><b><font size="5">Data Motion Network</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Argument</th>
+<th>IP Port</th>
+<th>Direction</th>
+<th>Declared Size(bytes)</th>
+<th>Pragmas</th>
+<th>Connection</th>
+</tr>
+<tr>
+<td>BinaryNet_1</td>
+<td>predict_num</td>
+<td>predict_num</td>
+<td>OUT</td>
+<td>1</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_M_AXI_GP0:AXILITE:0x20C</td>
+</tr>
+<td></td>
+<td>pbuf</td>
+<td>pbuf_V_PORTA</td>
+<td>IN</td>
+<td>32*4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_M_AXI_GP0:AXIFIFO</td>
+</tr>
+<tr>
+<td>layer0_1</td>
+<td>src</td>
+<td>src_V</td>
+<td>IN</td>
+<td>1024*1</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_S_AXI_ACP:AXIDMA_SG</td>
+</tr>
+<td></td>
+<td>pong</td>
+<td>pong_V</td>
+<td>OUT</td>
+<td>4704*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer1_1:ping_V</td>
+</tr>
+<tr>
+<td>layer1_1</td>
+<td>ping</td>
+<td>ping_V</td>
+<td>IN</td>
+<td>4704*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer0_1:pong_V</td>
+</tr>
+<td></td>
+<td>pong</td>
+<td>pong_V</td>
+<td>OUT</td>
+<td>1176*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer2_1:ping_V</td>
+</tr>
+<tr>
+<td>layer2_1</td>
+<td>ping</td>
+<td>ping_V</td>
+<td>IN</td>
+<td>1176*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer1_1:pong_V</td>
+</tr>
+<td></td>
+<td>pong</td>
+<td>pong_V</td>
+<td>OUT</td>
+<td>1600*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer3_1:ping_V</td>
+</tr>
+<tr>
+<td>layer3_1</td>
+<td>ping</td>
+<td>ping_V</td>
+<td>IN</td>
+<td>1600*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer2_1:pong_V</td>
+</tr>
+<td></td>
+<td>pong</td>
+<td>pong_V</td>
+<td>OUT</td>
+<td>400*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer4_1:ping_V</td>
+</tr>
+<tr>
+<td>layer4_1</td>
+<td>ping</td>
+<td>ping_V</td>
+<td>IN</td>
+<td>400*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer3_1:pong_V</td>
+</tr>
+<td></td>
+<td>pong</td>
+<td>pong_V</td>
+<td>OUT</td>
+<td>120*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer5_1:ping_V</td>
+</tr>
+<tr>
+<td>layer5_1</td>
+<td>ping</td>
+<td>ping_V</td>
+<td>IN</td>
+<td>120*1</td>
+<td><ul>
+</ul>
+</td>
+<td>layer4_1:pong_V</td>
+</tr>
+<td></td>
+<td>max_idx</td>
+<td>max_idx</td>
+<td>OUT</td>
+<td>4</td>
+<td><ul>
+</ul>
+</td>
+<td>ps7_M_AXI_GP0:AXILITE:0x20C</td>
+</tr>
+</table>
+
+<table>
+<caption><b><font size="5">Accelerator Callsites</font></b></caption>
+<tr>
+<th>Accelerator</th>
+<th>Callsite</th>
+<th>IP Port</th>
+<th>Transfer Size(bytes)</th>
+<th>Paged or Contiguous</th>
+<th>Datamover Setup Time(CPU cycles)</th>
+<th>Transfer Time(CPU cycles)</th>
+</tr>
+<tr>
+<td>BinaryNet_1</td>
+<td>VivadoHLS_BinaryNet.cpp:61:2</td>
+<td>predict_num</td>
+<td>1</td>
+<td>paged</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<td></td>
+<td></td>
+<td>pbuf_V_PORTA</td>
+<td>128</td>
+<td>paged</td>
+<td>7080</td>
+<td>416</td>
+</tr>
+<tr>
+<td>layer0_1</td>
+<td>VivadoHLS_BinaryNet.cpp:127:2</td>
+<td>src_V</td>
+<td>1024</td>
+<td>paged</td>
+<td>16570</td>
+<td>8444</td>
+</tr>
+<td></td>
+<td></td>
+<td>pong_V</td>
+<td>4704</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>layer1_1</td>
+<td>VivadoHLS_BinaryNet.cpp:130:2</td>
+<td>ping_V</td>
+<td>4704</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>pong_V</td>
+<td>1176</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>layer2_1</td>
+<td>VivadoHLS_BinaryNet.cpp:133:2</td>
+<td>ping_V</td>
+<td>1176</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>pong_V</td>
+<td>1600</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>layer3_1</td>
+<td>VivadoHLS_BinaryNet.cpp:136:2</td>
+<td>ping_V</td>
+<td>1600</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>pong_V</td>
+<td>400</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>layer4_1</td>
+<td>VivadoHLS_BinaryNet.cpp:139:2</td>
+<td>ping_V</td>
+<td>400</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>pong_V</td>
+<td>120</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>layer5_1</td>
+<td>VivadoHLS_BinaryNet.cpp:143:2</td>
+<td>ping_V</td>
+<td>120</td>
+<td>paged</td>
+<td></td>
+<td></td>
+</tr>
+<td></td>
+<td></td>
+<td>max_idx</td>
+<td>4</td>
+<td>paged</td>
+<td>0</td>
+<td>13</td>
+</tr>
+</table>
+</body>
+<dmn>
+	<accel name="BinaryNet_1">
+		<arg name="predict_num" ipPort="predict_num" direction="OUT" size="1" pragma="" connectionIpPort="ps7_M_AXI_GP0" connectionDm="AXILITE"\>
+		<arg name="pbuf" ipPort="pbuf_V_PORTA" direction="IN" size="32*4" pragma="" connectionIpPort="ps7_M_AXI_GP0" connectionDm="AXIFIFO"\>
+	</accel>
+	<accel name="layer0_1">
+		<arg name="src" ipPort="src_V" direction="IN" size="1024*1" pragma="" connectionIpPort="ps7_S_AXI_ACP" connectionDm="AXIDMA_SG"\>
+		<arg name="pong" ipPort="pong_V" direction="OUT" size="4704*1" pragma="" connectionIpPort="layer1_1/ping_V" connectionDm=""\>
+	</accel>
+	<accel name="layer1_1">
+		<arg name="ping" ipPort="ping_V" direction="IN" size="4704*1" pragma="" connectionIpPort="layer0_1/pong_V" connectionDm=""\>
+		<arg name="pong" ipPort="pong_V" direction="OUT" size="1176*1" pragma="" connectionIpPort="layer2_1/ping_V" connectionDm=""\>
+	</accel>
+	<accel name="layer2_1">
+		<arg name="ping" ipPort="ping_V" direction="IN" size="1176*1" pragma="" connectionIpPort="layer1_1/pong_V" connectionDm=""\>
+		<arg name="pong" ipPort="pong_V" direction="OUT" size="1600*1" pragma="" connectionIpPort="layer3_1/ping_V" connectionDm=""\>
+	</accel>
+	<accel name="layer3_1">
+		<arg name="ping" ipPort="ping_V" direction="IN" size="1600*1" pragma="" connectionIpPort="layer2_1/pong_V" connectionDm=""\>
+		<arg name="pong" ipPort="pong_V" direction="OUT" size="400*1" pragma="" connectionIpPort="layer4_1/ping_V" connectionDm=""\>
+	</accel>
+	<accel name="layer4_1">
+		<arg name="ping" ipPort="ping_V" direction="IN" size="400*1" pragma="" connectionIpPort="layer3_1/pong_V" connectionDm=""\>
+		<arg name="pong" ipPort="pong_V" direction="OUT" size="120*1" pragma="" connectionIpPort="layer5_1/ping_V" connectionDm=""\>
+	</accel>
+	<accel name="layer5_1">
+		<arg name="ping" ipPort="ping_V" direction="IN" size="120*1" pragma="" connectionIpPort="layer4_1/pong_V" connectionDm=""\>
+		<arg name="max_idx" ipPort="max_idx" direction="OUT" size="4" pragma="" connectionIpPort="ps7_M_AXI_GP0" connectionDm="AXILITE"\>
+	</accel>
+	<call accel="BinaryNet_1" site="VivadoHLS_BinaryNet.cpp:61:2">
+		<arg ipPort="predict_num" size="1" memType="paged" setup="0" transfer="3"/>
+		<arg ipPort="pbuf_V_PORTA" size="128" memType="paged" setup="7080" transfer="416"/>
+	</call>
+	<call accel="layer0_1" site="VivadoHLS_BinaryNet.cpp:127:2">
+		<arg ipPort="src_V" size="1024" memType="paged" setup="16570" transfer="8444"/>
+		<arg ipPort="pong_V" size="4704" memType="paged" setup="" transfer=""/>
+	</call>
+	<call accel="layer1_1" site="VivadoHLS_BinaryNet.cpp:130:2">
+		<arg ipPort="ping_V" size="4704" memType="paged" setup="" transfer=""/>
+		<arg ipPort="pong_V" size="1176" memType="paged" setup="" transfer=""/>
+	</call>
+	<call accel="layer2_1" site="VivadoHLS_BinaryNet.cpp:133:2">
+		<arg ipPort="ping_V" size="1176" memType="paged" setup="" transfer=""/>
+		<arg ipPort="pong_V" size="1600" memType="paged" setup="" transfer=""/>
+	</call>
+	<call accel="layer3_1" site="VivadoHLS_BinaryNet.cpp:136:2">
+		<arg ipPort="ping_V" size="1600" memType="paged" setup="" transfer=""/>
+		<arg ipPort="pong_V" size="400" memType="paged" setup="" transfer=""/>
+	</call>
+	<call accel="layer4_1" site="VivadoHLS_BinaryNet.cpp:139:2">
+		<arg ipPort="ping_V" size="400" memType="paged" setup="" transfer=""/>
+		<arg ipPort="pong_V" size="120" memType="paged" setup="" transfer=""/>
+	</call>
+	<call accel="layer5_1" site="VivadoHLS_BinaryNet.cpp:143:2">
+		<arg ipPort="ping_V" size="120" memType="paged" setup="" transfer=""/>
+		<arg ipPort="max_idx" size="4" memType="paged" setup="0" transfer="13"/>
+	</call>
+</dmn>
+</html>
